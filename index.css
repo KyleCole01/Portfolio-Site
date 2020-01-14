@@ -143,6 +143,10 @@ body {
   text-align: center;
   width:75%;
 }
+.about h1{
+  font-size: 4rem;
+  text-decoration: underline;
+}
 .words{
   background-color: var(--bg-color);
 }
