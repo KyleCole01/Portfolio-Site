@@ -3,7 +3,7 @@
   /* border:1px solid black; */
 }
 :root {
-  --cloud-height: 135vh;
+  --cloud-height: 120vh;
   --bg-color: rgb(173, 214, 228);
 }
 html{
@@ -11,10 +11,9 @@ html{
   margin:0;
 }
 body {
-  margin: 0;
+  margin: 0 0 10% 0;
   padding: 0;
-  /* background:url(./assets/cloud5.png); */
-  background-color: var(--bg-color);
+  background-color: tan;
 }
 
 
@@ -35,6 +34,7 @@ body {
 
 /* Title section with animations */
 .cloud-name {
+  width:75%;
   position: relative;
   text-align: center;
   margin: 0 auto;
@@ -43,53 +43,59 @@ body {
 }
 .cloud-section {
   margin-top: 0;
-  display: flex;
-  width: 100%;
+  width: 75%;
   height: var(--cloud-height);
   background-size: cover;
   background-attachment: fixed;
 }
-.wave img {
-  width: 40%;
-  height: auto;
+.cloud-name div{
+  margin:1% auto;
 }
-.cloud-section{
-}
-.cloud-section .wave {
-  position: absolute;
-  width: 100%;
-  bottom: 1;
-  left: 0;
-  background: url(./assets/cloud5.png);
-  opacity: 0.8;
-  animation: animate-reverse 20s linear infinite;
-}
-.cloud-section .wave:before {
-  content: "";
-  width: 100%;
-  height: var(--cloud-height);
-  background: url(./assets/cloud5.png);
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.9;
-  animation: animate 20s linear infinite;
-}
+
+
 .cloud-name img{
-  margin-bottom: 15%;
+  width:auto;
+  margin:0;
+  padding:0;
+  height:30vh;
 }
-.cloud-section .wave:after {
-  content: "";
-  width: 100%;
-  height: var(--cloud-height);
-  background: url(./assets/cloud5.png);
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.8;
-  animation-delay: 5s;
-  animation: animate-reverse 20s linear infinite;
-}
+
+
+/* cloud animations start */
+  .wave {
+    position: absolute;
+    width: 100%;
+    bottom: 1;
+    left: 0;
+    background: url(./assets/cloud5.png);
+    opacity: 0.8;
+    animation: animate-reverse 20s linear infinite;
+  }
+  .wave:before {
+    content: "";
+    width: 100%;
+    height: var(--cloud-height);
+    background: url(./assets/cloud5.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    animation: animate 20s linear infinite;
+  }
+
+  .wave:after {
+    content: "";
+    width: 100%;
+    height: var(--cloud-height);
+    background: url(./assets/cloud5.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    animation-delay: 5s;
+    animation: animate-reverse 20s linear infinite;
+    margin-bottom:10%;
+  }
 @keyframes animate {
   0% {
     background-position: 0;
@@ -106,81 +112,88 @@ body {
     background-position: 0;
   }
 }
-/* Middle (earth) section */
-
-
-.middle{
-    z-index: 2;
-    width:100%;
-    display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-
-.tree-section{
-    box-sizing: border-box;
-    width:100%;
-    margin:0;
-    display:flex;
-    z-index: 2;
-    justify-content: space-between;
-}
-.tree-section .about{
-    margin-top:1%;
-}
-#about{
-  margin:0 auto;
-  margin-bottom:6%;
-  text-align: center;
-  align-items: center;
-}
-.tree-section .about p{
-    margin:0 auto;
-    margin-bottom:5%;
-}
-.tree-section img{
-box-sizing: border-box;
-width:30%;
-margin-bottom:-5%;
-}
+/* end of cloud animations */
 
 .sand{
-    box-sizing: border-box;
-    justify-content: center;
-    margin:0%;
-    padding-top:6%;
-    width:100%;
-    background:url(./assets/sand.jpg);
-    height:180vh;
-    background-size: cover;
-    
-    
+  position: relative;
+  z-index: 2;
+  background-color: tan;
+  border-top:50px solid blue;
+  margin:0 auto;
 }
-.sand  *{
-    justify-content: center;
-    display: flex;
-}
-.hobbies{
-  width:30%;
+
+.sand-images{
   display:flex;
+  justify-content: space-between;
+}
+#profile{
+  margin:auto;
+  border:5px solid blue;
+  border-radius: 20%;
+}
+.sand-images img{
+  width:30%;
+  box-sizing: border-box;
+}
+
+.about{
+  display: flex;
+  margin:0 auto;
   flex-direction: column;
+  text-align: center;
+  width:75%;
+}
+.words{
+  background-color: var(--bg-color);
+}
+
+.hobbies{
+  width:80%;
+  display: flex;
+  flex-direction: column;
+  margin:0 auto;
+  text-align:center;
+}
+.sub-hobbies {
+  display:flex;
+  flex-wrap: wrap;
   justify-content: center;
+  flex-direction: row;
+}
+.sub-hobbies div{
+  display: flex;
+  flex-direction: column;
+  width:30%;
+  margin: 0 auto;
+
+}
+
+
+/* .hobbies{
+  width:80%;
+  display:flex;
+  justify-content: space-between;
   text-align: center;
   margin:2% auto;
+  margin-bottom:10%;
   background:none;
   background-color: var(--bg-color);
-  box-sizing: border-box;
   padding:2%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+} */
+@media(max-width:800px){
+  body{
+    width:100%;
+    max-width: 100%;
+  }
+  .hobbies{
+    justify-content: center;
+    flex-direction: column;
+  }
 }
-.sand img{
-  width:30%;
-  margin:0 auto;
-  margin-top:22%;
-  border: 2px solid black;
-}
+
+
 
 .experience{
   width:60%;
