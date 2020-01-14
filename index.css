@@ -201,3 +201,11 @@ body {
 
 /* need responsive design at 650ish,( need to figure margin for image and the text size for the 
 title, the trees are a bit limited looking at this px count) */
+
+
+#java-badge{
+  width:100%;
+  display:flex;
+  justify-content: center;
+  margin:10% auto;
+}
