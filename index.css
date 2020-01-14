@@ -203,8 +203,7 @@ body {
 title, the trees are a bit limited looking at this px count) */
 
 
-#java-badge{
-  width:100%;
+.java-badge{
   display:flex;
   justify-content: center;
   margin:10% auto;
