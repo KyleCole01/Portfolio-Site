@@ -169,19 +169,7 @@ body {
 }
 
 
-/* .hobbies{
-  width:80%;
-  display:flex;
-  justify-content: space-between;
-  text-align: center;
-  margin:2% auto;
-  margin-bottom:10%;
-  background:none;
-  background-color: var(--bg-color);
-  padding:2%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-} */
+
 @media(max-width:800px){
   body{
     width:100%;
