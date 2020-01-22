@@ -208,3 +208,13 @@ title, the trees are a bit limited looking at this px count) */
   justify-content: center;
   margin:10% auto;
 }
+.project{
+ width:20%;
+}
+.project-container{
+  margin-top: 3%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
